@@ -2,6 +2,10 @@
 //         so do not move it next to the other scripts
 
 const CACHE_NAME = 'lab-7-starter';
+const urlsToCache = ['/', 
+                    './assets/styles/main.css', 
+                    './index.html', 
+                    './assets/scripts/main.js'];
 
 // Once the service worker has been installed, feed it some initial URLs to cache
 self.addEventListener('install', function (event) {
@@ -9,7 +13,6 @@ self.addEventListener('install', function (event) {
    * TODO - Part 2 Step 2
    * Create a function as outlined above
    */
-   const urlsToCache = ['/', './assets/styles/main.css', './index.html', './assets/scripts/main.js']
    event.waitUntil(
     caches.open(CACHE_NAME)
       .then(function(cache) {
